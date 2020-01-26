@@ -8,14 +8,15 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles(theme => ({
     card: {
-        maxWidth: 345
+        maxWidth: 345,
+        marginBottom: theme.spacing(1)
     },
     media: {
         height: 140
     }
 }));
 
-const FoodCard = ({image, title}) => {
+const FoodCard = ({image, title, description}) => {
     const classes = useStyles();
     return (
     <Card className={classes.card}>
@@ -24,6 +25,9 @@ const FoodCard = ({image, title}) => {
             <CardContent>
                 <Typography gutterBottom variant={'h5'} component={'h2'}>
                     {title}
+                </Typography>
+                <Typography variant={'body2'} component={'p'} color={'textSecondary'}>
+                    {description}
                 </Typography>
             </CardContent>
         </CardActionArea>
