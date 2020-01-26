@@ -9,9 +9,9 @@ import LettuceImage from "../../images/food/lettuce.jpg"
 const Food = () => {
 
     const meatballDescription = 'Meatballs are great. There are so many sauces they can go with!';
-    const spaghettiDescription = 'Spaghetti is just so wholesome, you know? It\'s like that really good food you' +
+    const spaghettiDescription = 'Spaghetti is just so wholesome, you know? It\'s like that really good food you ' +
         'can just have whenever.';
-    const lettuceDescription = 'Lettuce has that amazing C R O N C H!!!! You just can\'t find that unique blend' +
+    const lettuceDescription = 'Lettuce has that amazing C R O N C H!!!! You just can\'t find that unique blend ' +
         'of crunchiness yet softness anywhere else.';
 
     return (
