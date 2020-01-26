@@ -6,7 +6,7 @@ const Contact = () => (
         <Typography variant={'h2'}>
             {'Have any questions about the food choices?'}
         </Typography>
-        <Typography variant={'p'}>
+        <Typography variant={'subtitle2'}>
             {'Please contact me!'}
         </Typography>
     </Fragment>

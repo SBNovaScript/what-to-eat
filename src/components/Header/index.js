@@ -1,7 +1,7 @@
-import {List, ListItem, Toolbar, Typography} from "@material-ui/core";
+import {Toolbar, Typography} from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import {NavLink} from "react-router-dom";
-import React, {Fragment} from "react";
+import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 
@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
         background: theme.palette.common.white,
     },
     toolBar: {
-        alignContent: 'center'
+        justifyContent: 'center'
     }
 }));
 
@@ -22,19 +22,19 @@ const Header = () => {
     const classes = useStyles();
 
     const HeaderMenu = () => (
-        <Toolbar>
+        <Toolbar className={classes.toolBar}>
             <Button color={'primary'} component={NavLink} to={'/'}>
-                <Typography variant={'p'}>
+                <Typography variant={'subtitle1'}>
                     {'Home'}
                 </Typography>
             </Button>
             <Button color={'primary'} component={NavLink} to={'/food'}>
-                <Typography variant={'p'}>
+                <Typography variant={'subtitle1'}>
                     {'Food'}
                 </Typography>
             </Button>
             <Button color={'primary'} component={NavLink} to={'/contact'}>
-                <Typography variant={'p'}>
+                <Typography variant={'subtitle1'}>
                     {'Contact'}
                 </Typography>
             </Button>

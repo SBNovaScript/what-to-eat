@@ -6,12 +6,12 @@ const Home = () => (
         <Typography variant={'h2'}>
             {'Hello!'}
         </Typography>
-        <Typography variant={'p'}>
+        <Typography variant={'subtitle2'}>
             {'This website is used to find out what to eat!' +
             'There are many great things that you can eat,' +
             'Of which you can find a good portion of them on this website.'}
         </Typography>
-        <Typography variant={'p'}>
+        <Typography variant={'subtitle2'}>
             {'Hope you enjoy!'}
         </Typography>
     </Fragment>

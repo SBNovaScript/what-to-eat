@@ -1,26 +1,19 @@
 import React, {Fragment} from "react";
-import {List, ListItem, ListItemText, Typography} from "@material-ui/core";
+import {ListItemText, Typography} from "@material-ui/core";
+import FoodCard from "../../components/FoodCard";
+import MeatballImage from "../../images/food/meatball.jpg"
+
 
 const Food = () => (
-    <Fragment>
-        <Typography variant={'h2'}>
-            {'Here are a list of good foods!'}
-        </Typography>
-        <List>
-            <ListItem>
-                <ListItemText primary={'Meatballs'} />
-            </ListItem>
-            <ListItem>
-                <ListItemText primary={'Spaghetti'} />
-            </ListItem>
-            <ListItem>
-                <ListItemText primary={'Cheese'} />
-            </ListItem>
-            <ListItem>
-                <ListItemText primary={'Lettuce'} />
-            </ListItem>
-        </List>
-    </Fragment>
-);
+        <Fragment>
+            <Typography variant={'h2'}>
+                {'Here is a list of good foods!'}
+            </Typography>
+            <FoodCard image={MeatballImage} title={'meatballs'}/>
+            <ListItemText primary={'Spaghetti'}/>
+            <ListItemText primary={'Cheese'}/>
+            <ListItemText primary={'Lettuce'}/>
+        </Fragment>
+    );
 
 export default Food;
