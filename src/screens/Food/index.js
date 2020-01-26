@@ -4,9 +4,17 @@ import FoodCard from "../../components/FoodCard";
 import MeatballImage from "../../images/food/meatball.jpg"
 import SpaghettiImage from "../../images/food/spagetti.jpg"
 import LettuceImage from "../../images/food/lettuce.jpg"
+import {makeStyles} from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
 
+const useStyles = makeStyles(theme => ({
+    grid: {
+        flexGrow: 1
+    }
+}));
 
 const Food = () => {
+    const classes = useStyles();
 
     const meatballDescription = 'Meatballs are great. There are so many sauces they can go with!';
     const spaghettiDescription = 'Spaghetti is just so wholesome, you know? It\'s like that really good food you ' +
@@ -16,13 +24,24 @@ const Food = () => {
 
     return (
         <Fragment>
-            <Typography variant={'h2'}>
+            <Typography variant={'h2'} gutterBottom>
                 {'Here is a list of good foods!'}
             </Typography>
-            <FoodCard image={MeatballImage} title={'Meatballs'} description={meatballDescription}/>
-            <FoodCard image={SpaghettiImage} title={'Spaghetti'} description={spaghettiDescription}/>
-            <FoodCard image={LettuceImage} title={'Lettuce'} description={lettuceDescription}/>
+            <Grid container className={classes.grid} spacing={1}>
+                <Grid container justify={'center'} spacing={3}>
+                    <Grid item>
+                        <FoodCard image={MeatballImage} title={'Meatballs'} description={meatballDescription}/>
+                    </Grid>
+                    <Grid item>
+                        <FoodCard image={SpaghettiImage} title={'Spaghetti'} description={spaghettiDescription}/>
+                    </Grid>
+                    <Grid item>
+                        <FoodCard image={LettuceImage} title={'Lettuce'} description={lettuceDescription}/>
+                    </Grid>
+                </Grid>
+            </Grid>
         </Fragment>
     );
 }
+
 export default Food;
