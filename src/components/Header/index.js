@@ -5,6 +5,8 @@ import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 
+// https://material-ui.com/customization/typography/#responsive-font-sizes
+
 const useStyles = makeStyles(theme => ({
     title: {
         textAlign: 'center',
