@@ -1,8 +1,9 @@
 import React, {Fragment} from "react";
 import Typography from "@material-ui/core/Typography";
+import PageWrapper from "../../components/PageWrapper";
 
 const Home = () => (
-    <Fragment>
+    <PageWrapper>
         <Typography variant={'h2'}>
             {'Hello!'}
         </Typography>
@@ -14,7 +15,7 @@ const Home = () => (
         <Typography variant={'subtitle2'}>
             {'Hope you enjoy!'}
         </Typography>
-    </Fragment>
+    </PageWrapper>
 );
 
 export default Home;

@@ -1,21 +1,21 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import {HashRouter, Route} from "react-router-dom";
 import Home from "./screens/home";
-import Food from "./screens/Food";
+import Food from "./screens/food";
 import Contact from "./screens/contact";
 import Header from "./components/Header";
+import {CssBaseline} from "@material-ui/core";
 
 const App = () => {
   return (
       <HashRouter>
-        <div>
+        <CssBaseline/>
             <Header/>
-            <div  className="content">
+            <Fragment>
                 <Route exact path={'/'} component={Home}/>
                 <Route path={'/food'} component={Food}/>
                 <Route path={'/contact'} component={Contact}/>
-            </div>
-        </div>
+            </Fragment>
       </HashRouter>
   );
 };

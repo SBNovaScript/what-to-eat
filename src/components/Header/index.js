@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const Header = () => {
+const Header = styles => {
     const classes = useStyles();
 
     const HeaderMenu = () => (

@@ -6,6 +6,7 @@ import SpaghettiImage from "../../images/food/spagetti.jpg"
 import LettuceImage from "../../images/food/lettuce.jpg"
 import {makeStyles} from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import PageWrapper from "../../components/PageWrapper";
 
 const useStyles = makeStyles(theme => ({
     grid: {
@@ -23,7 +24,7 @@ const Food = () => {
         'of crunchiness yet softness anywhere else.';
 
     return (
-        <Fragment>
+        <PageWrapper>
             <Typography variant={'h2'} gutterBottom>
                 {'Here is a list of good foods!'}
             </Typography>
@@ -40,7 +41,7 @@ const Food = () => {
                     </Grid>
                 </Grid>
             </Grid>
-        </Fragment>
+        </PageWrapper>
     );
 }
 
