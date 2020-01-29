@@ -1,4 +1,4 @@
-import {Toolbar, Typography} from "@material-ui/core";
+import {responsiveFontSizes, Toolbar, Typography} from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import {NavLink} from "react-router-dom";
 import React from "react";
@@ -8,7 +8,10 @@ import AppBar from "@material-ui/core/AppBar";
 const useStyles = makeStyles(theme => ({
     title: {
         textAlign: 'center',
-        color: theme.palette.primary.light
+        color: theme.palette.primary.light,
+        [theme.breakpoints.down('md')]: {
+            fontSize: '2.4rem'
+        }
     },
     appBar: {
         background: theme.palette.common.white,
